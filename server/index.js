@@ -2,7 +2,7 @@ const Hapi = require('@hapi/hapi');
 const routes = require('./routes');
 const PORT = 4000;
 const HOST = '0.0.0.0';
-const mongodbURI = 'mongodb://user:userPassword@host.docker.internal:27017/homeserve';
+const config = require('../config.json');
 
 const init = async () => {
   const server = Hapi.server({
@@ -14,7 +14,7 @@ const init = async () => {
   });
 
   const dbOpts = {
-    url: mongodbURI,
+    url: config.MONGO_DB_URI,
     settings: {
         poolSize: 10
     },

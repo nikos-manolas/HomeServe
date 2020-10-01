@@ -5,7 +5,6 @@ const getTradesPeopleRoute = {
   method: 'GET',
   path: '/tradesPeople/{code}',
   options: {
-    tags: ['api'],
     validate: {
       params: Joi.object({
         code: Joi.string().required()
@@ -32,7 +31,6 @@ const postTradesPeopleRoute = {
   method: 'POST',
   path: '/tradesPeople',
   options: {
-    tags: ['api'],
     validate: {
       payload: Joi.object({
         name: { firstName: Joi.string().required(), surname: Joi.string().required() },

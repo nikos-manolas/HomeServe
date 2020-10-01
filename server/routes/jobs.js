@@ -5,7 +5,6 @@ const getJobsRoute = {
   method: 'GET',
   path: '/jobs/available/{tradesPersonCode}',
   options: {
-    tags: ['api'],
     validate: {
       params: Joi.object({
         tradesPersonCode: Joi.string().required()
@@ -33,9 +32,6 @@ const getJobsRoute = {
 const getAllJobsRoute = {
   method: 'GET',
   path: '/jobs/available',
-  options: {
-    tags: ['api']
-  },
   handler: async (request, h) => {
     try {
       const { mongo: { db } } = request;
@@ -61,7 +57,6 @@ const postJobsRoute = {
   method: 'POST',
   path: '/jobs',
   options: {
-    tags: ['api'],
     validate: {
       payload: Joi.object({
         name: Joi.string().required(),

@@ -1,0 +1,3 @@
+{
+  "MONGO_DB_URI": "mongodb://user:userPassword@host.docker.internal:27017/homeserve"
+}
