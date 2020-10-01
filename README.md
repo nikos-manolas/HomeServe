@@ -5,8 +5,6 @@ The frontend has been bootstraped from create-react app.
 The backend is a Hapi server.
 The proxy between the two was not implemented.
 
-There are parts on the frontend that are not implemented ( adding a new tradesperson and choosing a job ).
-
 The whole project can be started by downloading and installing docker.
 
 Then running `docker-compose up` should start a mongodb instance + the backend + the frontend running on: `localhost:3000`
